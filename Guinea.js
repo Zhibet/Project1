@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
+const homeRoute = require('./routes/home');
 
-app.get('/',(req,res)=>{
-    res.send('hello the comit worked')
-})
+app.use('/',homeRoute);
+
 const port = 3000;
 app.listen(port,()=>{
 
